@@ -682,34 +682,24 @@ function initKeyBindings() {
         if (isDebugLogsEnabled()) {
             console.log(e.keyCode);
         }
-
-        switch (keyCode) {
-            case keypress.left:
-                navigate('Left');
-                break;
-            case keypress.up:
-                navigate('Up');
-                break;
-            case keypress.right:
-                navigate('Right');
-                break;
-            case keypress.down:
-                navigate('Down');
-                break;
-            case keypress.backspace:
-                navigate('Back');
-                break;
-            case keypress.enter:
-                navigate('Select');
-                break;
-            case keypress.i:
-                navigate('Info');
-                break;
-            case keypress.c:
-                navigate('ContextMenu');
-                break;
-        }
+        
+        navigate(keyCodeMapping(keyCode));
     });
+}
+
+function keyCodeMapping(keyCode) {
+    keypress = {left: 37, up: 38, right: 39, down: 40, backspace: 8, enter: 13, c: 67, i: 73 };
+
+    switch (keyCode) {
+        case keypress.left:      return 'Left';
+        case keypress.up:        return 'Up';
+        case keypress.right:     return 'Right';
+        case keypress.down:      return 'Down';
+        case keypress.backspace: return 'Back';
+        case keypress.enter:     return 'Select';
+        case keypress.i:         return 'Info';
+        case keypress.c:         return 'ContextMenu';
+    }
 }
 
 function toggleRepeat() {
@@ -767,6 +757,37 @@ function next() {
     playerGoNext(function () {
         onChangeUpdate();
     })
+}
+
+
+
+
+function moveLeft() {
+    navigate('Left');
+}
+
+function moveRight() {
+    navigate('Right');
+}
+
+function moveUp() {
+    navigate('Up');
+}
+
+function moveDown() {
+    navigate('Down');
+}
+
+function showInfo() {
+    navigate('Info');
+}
+
+function goBack() {
+    navigate('Back');
+}
+
+function select() {
+    navigate('Select');
 }
 
 function emptyPlaylist() {

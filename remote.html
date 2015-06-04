@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="vendor/font-awesome-4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap-3.3.4-dist/css/bootstrap.min.css">
+
     <link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.15.custom.css"/>
     <link rel="stylesheet" type="text/css" href="css/styles.css"/>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="vendor/bootstrap-3.3.4-dist/bootstrap.min.js"></script>
+
     <script type="text/javascript" src="js/modules.js"></script>
     <script type="text/javascript" src="js/shared.js"></script>
     <script type="text/javascript" src="js/remote.js"></script>
@@ -22,7 +26,30 @@
 </div></div>
 
 <div id="remoteRow" class="row">
-    <button id="previousBtn"><img src="images/prev.png" alt="Previous"></button><button id="rewindBtn"><img src="images/rw.jpg" alt="Step Back"/></button><span class="playpause"><button id="stopBtn"><img src="images/stop.jpg" alt="Stop"/></button><button id="playBtn"><img src="images/playpause.gif" alt="PlayPause"/></button></span><button id="fastForwardBtn"><img src="images/ff.jpg" alt="Step Forward"/></button><button id="nextBtn"><img src="images/skip.png" alt="Skip"/></button>
+    <button id="previousBtn"><i class="fa fa-step-backward"></i></button>
+    <button id="rewindBtn"><i class="fa fa-backward"></i></button>
+        <button id="stopBtn"><i class="fa fa-stop"></i></button>
+        <button id="playBtn"><i class="fa fa-play"></i><i class="fa fa-pause"></i></button>
+    <button id="fastForwardBtn"><i class="fa fa-forward"></i></button>
+    <button id="nextBtn"><i class="fa fa-step-forward"></i></button>
+</div>
+<div id="remoteRow" class="row">
+    <button id="contextBtn"><i class="fa fa-navicon"></i></button>
+    <button id="upBtn"><i class="fa fa-chevron-up"></i></button>
+    <button id="infoBtn"><i class="fa fa-info"></i></button>
+</div>
+<div id="remoteRow" class="row">
+    <button id="powerBtn"><i class="fa fa-power-off"></i></button>
+    <button id="leftBtn"><i class="fa fa-chevron-left"></i></button>
+    <button id="selectBtn"><i class="fa fa-dot-circle-o"></i></button>
+    <button id="rightBtn"><i class="fa fa-chevron-right"></i></button>
+    <button id="refreshBtn"><i class="fa fa-refresh"></i></button>
+</div>
+<div id="remoteRow" class="row">
+    <button id="backBtn"><i class="fa fa-arrow-left"></i></button>
+    <button id="downBtn"><i class="fa fa-chevron-down"></i></button>
+    <button id="playerBtn"><i class="fa fa-th"></i></button>
+
 </div>
 
 <div id="seekerRow" class="row">
@@ -33,7 +60,9 @@
 <div id="totalTime" class="timeIndicator"></div>
 
 <div id="volumeRow" class="row">
+    <i class="fa fa-volume-down"></i>
     <div id="volume_control" style="width:185px; margin: 5px 0 5px -5px;"></div>
+    <i class="fa fa-volume-up"></i>
 </div>
 
 <div id="buttonsRow" class="btn-toolbar">
@@ -101,8 +130,12 @@
 </div>
 
 <div class="row" style="text-align: center">
-    <a id="optionsBtn" href="options.html"><img height="48px" width="48px" src="images/configuration.jpg" alt="Configuration" style="float: left; margin-left: 3px;"/></a>
-    <a target="_blank" href="http://kodi.tv/" title="Kodi"><img src="images/kodi.png" alt="Kodi" style="float: right; padding-right: 10px;"/></a>
+    <a id="optionsBtn" href="options.html">
+        <i class="fa fa-gears fa-2x" style="float: left; margin-left: 3px;"></i>
+    </a>
+    <a target="_blank" href="http://kodi.tv/" title="Kodi">
+        <img src="images/kodi.png" alt="Kodi" style="float: right; padding-right: 10px;"/>
+    </a>
     <div id="playlistTextContainer" style="padding-top: 12px; display: none;"><span id="playlistText" class="label label-success"></span></div>
     <div id="warningTextContainer" style="padding: 12px 0; text-align: center;"><span class="label label-warning">Connecting...</span></div>
 </div>

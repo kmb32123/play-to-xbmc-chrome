@@ -15,7 +15,14 @@ var actions = {
     "SmallSkipBackward":"VideoPlayer.SmallSkipBackward",
     "SmallSkipForward":"VideoPlayer.SmallSkipForward",
     "GoPrevious": "Player.GoPrevious",
-    "GoNext": "Player.GoNext"
+    "GoNext": "Player.GoNext",
+    "MoveUp": "Input.Up",
+    "MoveDown": "Input.Down",
+    "MoveLeft": "Input.Left",
+    "MoveRight": "Input.Right",
+    "ShowInfo": "Input.Info",
+    "GoBack": "Input.Back",
+    "Select": "Input.Select"
 };
 
 var validPlaylistPatterns = [

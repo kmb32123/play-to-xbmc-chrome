@@ -23,7 +23,23 @@ $(document).ready( function() {
     $('#playBtn').click(function() {playPause()});
     $('#fastForwardBtn').click(function() {playerSeek('smallforward')});
     $('#nextBtn').click(function() {next()});
+    
+    $('#leftBtn').click(function() {navigate('Left')});
+    $('#rightBtn').click(function() {navigate('Right')});
+    $('#upBtn').click(function() {navigate('Up')});
+    $('#downBtn').click(function() {navigate('Down')});
 
+    $('#selectBtn').click(function() {navigate('Select')});
+    $('#backBtn').click(function() {navigate('Back')});
+    $('#infoBtn').click(function() {navigate('Info')});
+    $('#contextBtn').click(function() {navigate('ContextMenu')});
+    $('#playerBtn').click(function() {navigate('ShowOSD')});
+
+
+
+
+    
+    
     $('#queueListButton').click(function() {queuePlaylist($(this))});
     $('#addToFavButton').click(function() {addToFavourites()});
     $('#repeatButton').click(function() {toggleRepeat()});
